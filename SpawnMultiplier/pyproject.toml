@@ -1,0 +1,11 @@
+[project]
+name = "Spawn Multiplier"
+version = "1.0.0"
+authors = [{ name = "Pyrex and Garwood" }]
+description = "Multiplies all spawns in the game."
+
+[tool.sdkmod]
+name = "Spawn Multiplier"
+license = {name = "GPL3", url = "https://choosealicense.com/licenses/gpl-3.0/" }
+supported_games = ["BL3"]
+version = "1.0.0"
