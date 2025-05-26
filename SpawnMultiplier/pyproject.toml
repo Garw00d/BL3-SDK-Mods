@@ -8,5 +8,5 @@ description = "Multiplies all spawns in the game."
 name = "Spawn Multiplier"
 license = {name = "GPL3", url = "https://choosealicense.com/licenses/gpl-3.0/" }
 supported_games = ["BL3"]
-download = "https://github.com/Garw00d/BL3-SDK-Mods/tree/main/SpawnMultiplier"
+download = "https://github.com/Garw00d/BL3-SDK-Mods/raw/main/SpawnMultiplier/SpawnMultiplier.sdkmod"
 version = "1.0.0"
