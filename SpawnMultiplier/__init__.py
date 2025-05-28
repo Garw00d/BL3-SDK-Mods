@@ -1,11 +1,18 @@
 from typing import Any
+from argparse import Namespace
 import unrealsdk #type: ignore
-from mods_base import build_mod, hook, ENGINE, SliderOption, keybind, BoolOption, get_pc #type: ignore
+from mods_base import build_mod, hook, ENGINE, SliderOption, keybind, BoolOption, get_pc, command #type: ignore
 from unrealsdk.hooks import Type , Block #type: ignore
 from unrealsdk.unreal import BoundFunction, UObject, WrappedStruct #type: ignore
 from ui_utils import show_hud_message #type: ignore
 EnemySlider: SliderOption = SliderOption("Enemy Multiplier", 4, 1, 25, 1, True)
 EnableSpawnPoints: BoolOption = BoolOption("Create Additional Spawn Points", True, "Enabled", "Disabled",)
+
+@command("force_multiplier", description="Override the slider and set a multiplier value")
+def setMultiplier(args: Namespace) -> None:
+    EnemySlider.value = int(args.multiplierValue)
+
+setMultiplier.add_argument("multiplierValue", help="the multiplier to set, no guarentees it will be stable")
 
 @hook("/Script/Engine.PlayerController:ServerNotifyLoadedWorld", Type.POST)
 def SpawnMultiply(obj: UObject, args: WrappedStruct, _3: Any, _4: BoundFunction) -> None:
