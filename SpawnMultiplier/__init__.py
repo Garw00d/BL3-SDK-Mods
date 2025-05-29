@@ -8,7 +8,7 @@ from ui_utils import show_hud_message #type: ignore
 EnemySlider: SliderOption = SliderOption("Enemy Multiplier", 4, 1, 25, 1, True)
 EnableSpawnPoints: BoolOption = BoolOption("Create Additional Spawn Points", True, "Enabled", "Disabled",)
 
-@command("force_multiplier", description="Override the slider and set a multiplier value")
+@command("setmultiplier", description="Override the slider and set a multiplier value")
 def setMultiplier(args: Namespace) -> None:
     EnemySlider.value = int(args.multiplierValue)
 
