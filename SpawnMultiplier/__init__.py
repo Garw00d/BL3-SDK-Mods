@@ -167,6 +167,12 @@ def ExtraSpawnPoints(obj: UObject, args: WrappedStruct, _3: Any, _4: BoundFuncti
 
                 MakeSpawnPoint(spawner, LocationList, RotationList)
 
+            elif "OakMissionSpawnerTyreen" in str(spawner.SpawnerComponent):
+                LocationList: list = [unrealsdk.make_struct("Vector", X=2855, Y=-4120, Z=1084), unrealsdk.make_struct("Vector", X=933, Y=-5960, Z=1087), unrealsdk.make_struct("Vector", X=4373, Y=-6712, Z=1079), unrealsdk.make_struct("Vector", X=4236, Y=-1583, Z=1084), unrealsdk.make_struct("Vector", X=1104, Y=-2132, Z=1087)]
+                RotationList: list = [unrealsdk.make_struct("Rotator", Roll=0, Pitch=0, Yaw=0), unrealsdk.make_struct("Rotator", Roll=0, Pitch=0, Yaw=0), unrealsdk.make_struct("Rotator", Roll=0, Pitch=0, Yaw=0), unrealsdk.make_struct("Rotator", Roll=0, Pitch=0, Yaw=0), unrealsdk.make_struct("Rotator", Roll=0, Pitch=0, Yaw=0)]
+
+                MakeSpawnPoint(spawner, LocationList, RotationList)
+
             elif "_Ruiner_" in str(spawner.SpawnerComponent):
                 LocationList: list = [unrealsdk.make_struct("Vector", X=307.77777099609375, Y=-12107.6376953125, Z=2794.4921875), unrealsdk.make_struct("Vector", X=170, Y=-18099, Z=2875), unrealsdk.make_struct("Vector", X=6307, Y=-18038, Z=2868), unrealsdk.make_struct("Vector", X=6612, Y=-11881, Z=2832)]
                 RotationList: list = [unrealsdk.make_struct("Rotator", Roll=0, Pitch=0, Yaw=-50.000091552734375), unrealsdk.make_struct("Rotator", Roll=0, Pitch=0, Yaw=40.000091552734375), unrealsdk.make_struct("Rotator", Roll=0, Pitch=0, Yaw=130.000091552734375), unrealsdk.make_struct("Rotator", Roll=0, Pitch=0, Yaw=-140.000091552734375)]
